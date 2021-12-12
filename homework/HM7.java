@@ -14,6 +14,8 @@ public class HM7 {
         String dogsAmount = reader.readLine();
         System.out.println("Введите количество котов: ");
         String catsAmount = reader.readLine();
+        System.out.println("Введите количество дней в месяце: ");
+        String daysInMonth = reader.readLine();
         System.out.println("Сколько грамм в порции: ");
         String foodQuantity = reader.readLine();
         System.out.println("Введите количество приемов порций: ");
@@ -23,12 +25,13 @@ public class HM7 {
 
         int dogs = Integer.parseInt(dogsAmount);
         int cats = Integer.parseInt(catsAmount);
+        int days = Integer.parseInt(daysInMonth);
         int moneyForFood = Integer.parseInt(foodCost);
         int onePortion = Integer.parseInt(foodQuantity);
         int amountPortions = Integer.parseInt(dailyFood);
-        int dogsFoodPerMonth = animalFoodPerMonth(onePortion,amountPortions,dogs);
-        int catsFoodPerMonth = animalFoodPerMonth(onePortion,amountPortions,cats);
-        int animalShelterCostPerMonth = animalShelterCost(amountPortions,moneyForFood,dogs,cats);
+        int dogsFoodPerMonth = animalFoodPerMonth(onePortion,amountPortions,days,dogs);
+        int catsFoodPerMonth = animalFoodPerMonth(onePortion,amountPortions,days, cats);
+        int animalShelterCostPerMonth = animalShelterCost(amountPortions,moneyForFood,days,dogs,cats);
 
         System.out.println("Сколько нужно купить корма для собак в граммах: " + dogsFoodPerMonth);
         System.out.println("Сколько нужно купить корма для котов в граммах: " + catsFoodPerMonth);
@@ -36,12 +39,12 @@ public class HM7 {
 
 
     }
-    static int animalFoodPerMonth(int onePortion,int amountPortions, int animals){
-        return ((onePortion * amountPortions) * 31)* animals;
+    static int animalFoodPerMonth(int onePortion,int amountPortions,int days, int animals){
+        return ((onePortion * amountPortions) * days)* animals;
 
     }
-    static int animalShelterCost(int amountPortions ,int moneyForFood, int dogs ,int cats){
-        return ((moneyForFood * amountPortions) * (dogs + cats) * 31) ;
+    static int animalShelterCost(int amountPortions ,int moneyForFood,int days, int dogs ,int cats){
+        return ((moneyForFood * amountPortions) * (dogs + cats) * days) ;
 
     }
 }
