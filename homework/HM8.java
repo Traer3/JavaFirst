@@ -31,18 +31,18 @@ public class HM8 {
         switch (selectingBagType) {
             case 1:
 
-                if (length >= 40 && width >= 22) {
+                if (length > 40 && width > 22) {
                     System.out.println("Ваш чемодан не подходит по размеру");
-                } else if (height >= 53) {
+                } else if (height > 53) {
                     System.out.println("Ваш чемодан не подходит по размеру");
                 } else {
                     System.out.println("Пройдите дальше");
                 }
                 break;
             case 2:
-                if (length >= 55 && width >= 20 ) {
+                if (length > 55 && width > 20 ) {
                     System.out.println("Ваш рюкзак не подходит по размеру");
-                } else if (height >= 40) {
+                } else if (height > 40) {
                     System.out.println("Ваш рюкзак не подходит по размеру");
                 }else {
                     System.out.println("Пройдите дальше");
