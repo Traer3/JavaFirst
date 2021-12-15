@@ -13,7 +13,7 @@ public class HM8 {
         System.out.println("Введите 1 , если вы хотите выбрать чемодан");
         System.out.println("Введите 2 , если вы хотите выбрать рюкзак");
 
-        int SelectingBagType = Integer.parseInt(reader.readLine());
+        int selectingBagType = Integer.parseInt(reader.readLine());
         System.out.println("Введите пожалуйста параметры вашей сумки");
         System.out.println("Длина");
         int length = Integer.parseInt(reader.readLine());
@@ -22,26 +22,34 @@ public class HM8 {
         System.out.println("Высота");
         int height = Integer.parseInt(reader.readLine());
 
-        bagType(SelectingBagType, length, width, height);
+
+        bagType(selectingBagType, length, width, height);
 
     }
 
-    private static void bagType(int SelectingBagType, int length, int widt, int height) {
-        switch (SelectingBagType) {
+    private static void bagType(int selectingBagType, int length, int width, int height) {
+        switch (selectingBagType) {
             case 1:
-                if (length > 40 && widt > 22 && height > 53) {
-                    System.out.println("Ваш чемодан слишком большой ");
+
+                if (length >= 40 && width >= 22) {
+                    System.out.println("Ваш чемодан не подходит по размеру");
+                } else if (height >= 53) {
+                    System.out.println("Ваш чемодан не подходит по размеру");
                 } else {
                     System.out.println("Пройдите дальше");
                 }
                 break;
             case 2:
-                if (length > 55 && widt > 20 && height > 40) {
-                    System.out.println("Ваш рюкзак слишком большой");
-                } else {
+                if (length >= 55 && width >= 20 ) {
+                    System.out.println("Ваш рюкзак не подходит по размеру");
+                } else if (height >= 40) {
+                    System.out.println("Ваш рюкзак не подходит по размеру");
+                }else {
                     System.out.println("Пройдите дальше");
                 }
                 break;
         }
     }
+
+
 }
