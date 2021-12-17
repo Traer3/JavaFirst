@@ -27,26 +27,41 @@ public class HM8 {
 
     }
 
+    static boolean suitcase(int length, int width, int height) {
+        if (length <= 40 && width <= 22 && height <= 53) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    static boolean backpack(int length, int width, int height) {
+        if (length <= 55 && width <= 20 && height <= 40) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+
+
+
     private static void bagType(int selectingBagType, int length, int width, int height) {
+
         switch (selectingBagType) {
             case 1:
 
-                if (length > 40 && width > 22) {
-                    System.out.println("Ваш чемодан не подходит по размеру");
-                } else if (height > 53) {
-                    System.out.println("Ваш чемодан не подходит по размеру");
-                } else {
-                    System.out.println("Пройдите дальше");
-                }
+                suitcase(length, width, height);
+                System.out.println("Можно пройти ?  " + suitcase(length, width, height));
+
                 break;
             case 2:
-                if (length > 55 && width > 20 ) {
-                    System.out.println("Ваш рюкзак не подходит по размеру");
-                } else if (height > 40) {
-                    System.out.println("Ваш рюкзак не подходит по размеру");
-                }else {
-                    System.out.println("Пройдите дальше");
-                }
+
+                backpack(length, width, height);
+                System.out.println("Можно пройти ?  " + backpack(length, width, height));
+
                 break;
         }
     }
