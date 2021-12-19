@@ -21,12 +21,18 @@ public class HM9 {
         System.out.println("Введите оценку за англиский язык : ");
         int english = Integer.parseInt(reader.readLine());
 
-        grantsCalculation(math, informatics, russian, drawing, english);
+        int number = scoreCalculation(math, informatics, russian, drawing, english);
+
+        grantsCalculation(number);
 
     }
 
-    static void grantsCalculation(int math, int informatics, int russian, int drawing, int english) {
-        int number = (math + informatics + russian + drawing + english) / 5;
+    static int scoreCalculation(int math, int informatics, int russian, int drawing, int english) {
+        return (math + informatics + russian + drawing + english) / 5;
+    }
+
+    static void grantsCalculation(int number) {
+
         if (number <= 7) {
             System.out.println("нет стипендии");
         } else if (number <= 9) {
