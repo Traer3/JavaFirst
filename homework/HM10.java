@@ -26,7 +26,7 @@ public class HM10 {
 
     private static Integer numbers() {
         try {
-            System.out.println("Введите первое значение : ");
+            System.out.println("Введите цифру  : ");
             String str = READER.readLine();
             return Integer.parseInt(str);
         } catch (Exception exception) {
