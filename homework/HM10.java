@@ -5,39 +5,67 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class HM10 {
+    static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Введите первое значение : ");
-        int number1 = Integer.parseInt(reader.readLine());
+
+        int num1 = number1();
+
         System.out.println("Введите операцию : ");
-        String operation = reader.readLine();
-        System.out.println("Введите второе значение : ");
-        int number2 = Integer.parseInt(reader.readLine());
-        int result = numbersCalculation(number1, operation, number2);
+
+
+        char operation = READER.readLine().charAt(0);
+
+        int num2 = number2();
+
+        int result = numbersCalculation(num1, operation, num2);
         System.out.println("Результат = " + result);
 
 
     }
+    private static Integer number1() {
+        try {
+            System.out.println("Введите первое значение : ");
+            String str = READER.readLine();
+            return Integer.parseInt(str);
+        } catch (Exception exception) {
+            System.out.println("Error: " + exception.getMessage());
+            return number1();
+        }
+    }
+    private static Integer number2() {
+        try {
+            System.out.println("Введите второе значение : ");
+            String str = READER.readLine();
+            return Integer.parseInt(str);
+        } catch (Exception exception) {
+            System.out.println("Error: " + exception.getMessage());
+            return number2();
+        }
+    }
 
-    static int numbersCalculation(int number1, String operation, int number2) {
+
+
+
+    static int numbersCalculation(int num1, char operation, int num2) throws IOException {
         int result;
         switch (operation) {
-            case "+":
-                result = number1 + number2;
+            case '+':
+                result = num1 + num2;
                 break;
-            case "-":
-                result = number1 - number2;
+            case '-':
+                result = num1 - num2;
                 break;
-            case "*":
-                result = number1 * number2;
+            case '*':
+                result = num1 * num2;
                 break;
-            case "/":
-                result = number1 / number2;
+            case '/':
+                result = num1 / num2;
                 break;
             default:
                 System.out.println("Операция не распознана. Повторите ввод.");
-                result = numbersCalculation(number1, operation, number2);
+                operation = READER.readLine().charAt(0);
+                result = numbersCalculation(num1, operation, num2);
         }
         return result;
     }
