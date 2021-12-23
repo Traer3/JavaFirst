@@ -9,41 +9,29 @@ public class HM10 {
     public static void main(String[] args) throws IOException {
 
 
-        int num1 = number1();
+        int num1 = numbers();
 
         System.out.println("Введите операцию : ");
 
-
         char operation = READER.readLine().charAt(0);
 
-        int num2 = number2();
+        int num2 = numbers();
 
         int result = numbersCalculation(num1, operation, num2);
         System.out.println("Результат = " + result);
 
 
     }
-    private static Integer number1() {
+    private static Integer numbers() {
         try {
             System.out.println("Введите первое значение : ");
             String str = READER.readLine();
             return Integer.parseInt(str);
         } catch (Exception exception) {
             System.out.println("Error: " + exception.getMessage());
-            return number1();
+            return numbers();
         }
     }
-    private static Integer number2() {
-        try {
-            System.out.println("Введите второе значение : ");
-            String str = READER.readLine();
-            return Integer.parseInt(str);
-        } catch (Exception exception) {
-            System.out.println("Error: " + exception.getMessage());
-            return number2();
-        }
-    }
-
 
 
 
