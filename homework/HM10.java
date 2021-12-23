@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 public class HM10 {
     static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
+
     public static void main(String[] args) throws IOException {
 
 
@@ -22,6 +23,7 @@ public class HM10 {
 
 
     }
+
     private static Integer numbers() {
         try {
             System.out.println("Введите первое значение : ");
@@ -32,7 +34,6 @@ public class HM10 {
             return numbers();
         }
     }
-
 
 
     static int numbersCalculation(int num1, char operation, int num2) throws IOException {
