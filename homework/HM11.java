@@ -10,11 +10,12 @@ public class HM11 {
         int middleNumber = lowNumber;
 
 
-        RandomNumbers(lowNumber,highNumber,middleNumber,generator);
+        RandomNumbers(lowNumber, highNumber, middleNumber, generator);
 
 
     }
-    static void RandomNumbers(int lowNumber,int highNumber,int middleNumber,Random generator){
+
+    static void RandomNumbers(int lowNumber, int highNumber, int middleNumber, Random generator) {
         int i;
         for (i = 0; i < 3; i++) {
             int randomInt = generator.nextInt(1, 10);
