@@ -1,36 +1,43 @@
 package com.hillel.homework;
 
+
 import java.util.Random;
 
 public class HM11 {
     public static void main(String[] args) {
 
-        int firstNumber = randomIntMethode();
-        int secondNumber = randomIntMethode();
-        int thirdNumber = randomIntMethode();
+        int firstNumber = randomNumber();
+        int secondNumber = randomNumber();
+        int thirdNumber = randomNumber();
 
-        randomNumber(firstNumber, secondNumber, thirdNumber);
+        int answer = sortRandomNumber(firstNumber, secondNumber, thirdNumber);
+
+        System.out.println("Минимальное : " + answer);
 
     }
 
-    static int randomIntMethode() {
+    static int randomNumber() {
         Random generator = new Random();
 
-        int randomInt = generator.nextInt(1, 10);
+        int randomInt = generator.nextInt(10);
 
         return randomInt;
     }
 
-    static void randomNumber(int firstNumber, int secondNumber, int thirdNumber) {
+    static int sortRandomNumber(int firstNumber, int secondNumber, int thirdNumber) {
 
 
         if (firstNumber <= secondNumber && firstNumber <= thirdNumber) {
-            System.out.println("Минимальное : " + firstNumber);
+            return firstNumber;
+
 
         } else if (secondNumber <= firstNumber && secondNumber <= thirdNumber) {
-            System.out.println("Минимальное : " + secondNumber);
+            return secondNumber;
+
+
         } else {
-            System.out.println("Минимальное : " + thirdNumber);
+            return thirdNumber;
+           
 
         }
 
@@ -39,3 +46,4 @@ public class HM11 {
 
 
 }
+
