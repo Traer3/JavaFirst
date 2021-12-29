@@ -4,31 +4,38 @@ import java.util.Random;
 
 public class HM11 {
     public static void main(String[] args) {
-        Random generator = new Random();
-        int lowNumber = generator.nextInt(1, 10);
-        int highNumber = lowNumber;
 
+        int firstNumber = randomIntMethode();
+        int secondNumber = randomIntMethode();
+        int thirdNumber = randomIntMethode();
 
-        RandomNumbers(lowNumber, highNumber, generator);
+        randomNumber(firstNumber, secondNumber, thirdNumber);
 
     }
 
-    static void RandomNumbers(int lowNumber, int highNumber, Random generator) {
-        int i;
-        for (i = 0; i < 3; i++) {
-            int randomInt = generator.nextInt(1, 10);
-            if (randomInt < lowNumber) {
-                lowNumber = randomInt;
-            }
-            if (randomInt > highNumber) {
-                highNumber = randomInt;
-            }
+    static int randomIntMethode() {
+        Random generator = new Random();
+
+        int randomInt = generator.nextInt(1, 10);
+
+        return randomInt;
+    }
+
+    static void randomNumber(int firstNumber, int secondNumber, int thirdNumber) {
+
+
+        if (firstNumber <= secondNumber && firstNumber <= thirdNumber) {
+            System.out.println("Минимальное : " + firstNumber);
+
+        } else if (secondNumber <= firstNumber && secondNumber <= thirdNumber) {
+            System.out.println("Минимальное : " + secondNumber);
+        } else {
+            System.out.println("Минимальное : " + thirdNumber);
 
         }
-        System.out.println("Минимальное число: " + lowNumber + " Максимальное число : " + highNumber);
-        System.out.println();
-        System.out.println("Минимальное число: " + lowNumber);
+
 
     }
+
 
 }
