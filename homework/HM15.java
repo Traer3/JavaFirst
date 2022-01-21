@@ -6,35 +6,33 @@ import java.io.InputStreamReader;
 
 public class HM15 {
     static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
-
     public static void main(String[] args) throws IOException {
 
         System.out.println("Введите палиндром");
 
-        String[] palindrome = {READER.readLine()};
+        String original = READER.readLine();
 
-
-        String palindromeInfoPrint = palindromeChek(palindrome);
-        System.out.println(palindromeInfoPrint);
+        palindromeCheck(original);
 
     }
-    public static String palindromeChek(String[] palindrome){
+    public static boolean palindromeCheck(String original){
 
-        String palindromeChekPositive  = "Это палиндром";
-        String palindromeChekNegative = "Это не палиндром";
-        int count = 0;
-        int palindromeLength = palindrome.length;
-        for (int i = 0; i < palindromeLength; i++) {
-            if (palindrome[i] == palindrome[palindromeLength - 1 - i]){
-                count++;
+        String revers = "";
+        boolean palindrome = true;
+        for (int i = original.length() - 1 ; i >=0; i--) {
+            revers += original.charAt(i);
+        }
+
+        for (int i = 0; i < original.length(); i++) {
+            if (original.charAt(i) != revers.charAt(i)){
+                palindrome = false;
             }
         }
-        if (count == palindromeLength){
-           return palindromeChekPositive;}
-        else {
-            return palindromeChekNegative;
+        if(palindrome){
+            System.out.println("Палиндром");
+        }else {
+            System.out.println("Не палиндром");
         }
-
-
+        return true;
     }
 }
