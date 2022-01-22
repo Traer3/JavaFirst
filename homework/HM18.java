@@ -8,14 +8,14 @@ public class HM18 {
     static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
     public static void main(String[] args) {
 
-        System.out.println("Введите первый масив чисел");
+        System.out.println("Введите длину первого случайного масива ");
         System.out.println();
         int[] first = arrayLength();
-        System.out.println("Введите второй масив чисел");
+        System.out.println("Введите длину второй масива чисел");
         System.out.println();
         int[] second = arrayLength();
 
-        arrayFill(first);
+        arrayRandom(first);
         arrayFill(second);
 
 
@@ -74,5 +74,17 @@ public class HM18 {
             }
 
         }
+    }
+
+    public static void arrayRandom(int[] numbers){
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = mathRandom();
+        }
+    }
+
+    public static int mathRandom() {
+        double random = Math.random();
+        int r = (int) (10 + random * 50);
+        return r;
     }
 }
