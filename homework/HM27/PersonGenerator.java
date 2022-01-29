@@ -6,10 +6,14 @@ public class PersonGenerator {
 
         String[] randomPerson = new String[100];
 
+
+
         for (int i = 0; i < randomPerson.length; i++) {
 
-            randomPerson[i] += Person.personGenerator();
+            randomPerson[i] = Person.personGenerator();
+
             System.out.println(randomPerson[i]);
+            System.out.println("");
         }
     }
 
