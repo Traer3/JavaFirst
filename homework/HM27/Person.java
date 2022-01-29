@@ -42,10 +42,15 @@ public class Person {
 
             randomName = " " + firstNames[firstIndex] + " " + secondNames[secondIndex];
 
-
         }
+        double random = Math.random();
+        int age = (int) (10 + random * 60);
 
-        return randomName;
+        int weight = (int) (45 + random * 150);
+
+        int size = (int) (150 + random * 50);
+
+        return randomName + " age: " +age+ " weight: " +weight + " size: " +size;
     }
 
     @Override
