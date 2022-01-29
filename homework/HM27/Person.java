@@ -34,13 +34,15 @@ public class Person {
         String[] firstNames = { "Myles", "Eliezer", "Douglas", "Darian", "Brock", "Johnny", "Reed", "Howard", "Cristofer", "Kolten", "Eugene", "Neil", "Jason", "Franklin", "Joe", "Jerry", "Allen", "Samuel", "Dario", "Nelson", "Antonio", "Carsen", "Adan", "Alijah"  };
         String[] secondNames = { " Lester", " Bryan", " Rojas", " Cameron", " Vega", " Dickson", " Leonard", " Faulkner", " Kelly", " Friedman", "  Kaiser" ,"Hester","Francis","Burke","Flowers","Santos","Farrell","Myers","Key","Maynard","Davidson"};
 
-        String randomName = "";
+        String name = "";
+        String secondName = "";
 
         for (int i = 0; i < 1; i++) {
             int firstIndex = randomNamer.nextInt(firstNames.length);
             int secondIndex = randomNamer.nextInt(secondNames.length);
 
-            randomName = " " + firstNames[firstIndex] + " " + secondNames[secondIndex];
+            name = firstNames[firstIndex];
+            secondName = secondNames[secondIndex];
 
         }
         double random = Math.random();
@@ -50,7 +52,7 @@ public class Person {
 
         int size = (int) (150 + random * 50);
 
-        return randomName + " age: " +age+ " weight: " +weight + " size: " +size;
+        return name + secondName  + age + weight + size;
     }
 
     @Override
