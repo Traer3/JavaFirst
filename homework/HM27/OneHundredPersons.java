@@ -7,7 +7,6 @@ public class OneHundredPersons {
         String[] randomPerson = new String[100];
 
 
-
         for (int i = 0; i < randomPerson.length; i++) {
 
             randomPerson[i] = Person.personGenerator();
