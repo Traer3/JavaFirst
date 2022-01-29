@@ -1,6 +1,6 @@
 package com.hillel.homework.HM27;
 
-public class PersonGenerator {
+public class OneHundredPersons {
     public static void main(String[] args) {
 
 
