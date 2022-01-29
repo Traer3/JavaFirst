@@ -52,7 +52,7 @@ public class Person {
 
         int size = (int) (150 + random * 50);
 
-        return name + secondName  + age + weight + size;
+        return " Name: " + name+ " Second Name: "+ secondName  + " age: " +age+ " weight: " +weight + " size: " +size;
     }
 
     @Override
