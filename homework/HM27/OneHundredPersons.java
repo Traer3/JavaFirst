@@ -8,20 +8,13 @@ public class OneHundredPersons {
 
         for (int i = 0; i < randomPerson.length; i++) {
 
-           randomPerson[i] += new Person(Person.nameGenerator(),Person.secondNameGenerator(),Person.personAgeGenerator(),Person.personWeightGenerator(),Person.personSizeGenerator());
+            randomPerson[i] += new Person(Person.nameGenerator(), Person.secondNameGenerator(), Person.personAgeGenerator(), Person.personWeightGenerator(), Person.personSizeGenerator());
 
             System.out.println(randomPerson[i]);
         }
 
 
-
-
-
-
-
-
     }
-
 
 
 }
