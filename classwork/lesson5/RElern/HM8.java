@@ -5,31 +5,35 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class HM8 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+
+
+    public void main(String[] args) throws IOException {
+
+        BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Выберите тип багажа");
         System.out.println("Введите 1 , если вы хотите выбрать сумку ");
         System.out.println("Введите 2 , если вы хотите выбрать рюкзак ");
 
-        byte choice = byteOnly(reader);
+        byte choice = byteOnly(READER);
 
         System.out.println("Введите длину: ");
-        byte length = Byte.parseByte(reader.readLine());
+        byte length = byteOnly(READER);
         System.out.println("Введите ширину: ");
-        byte width = Byte.parseByte(reader.readLine());
+        byte width = byteOnly(READER);
         System.out.println("Введите высоту: ");
-        byte height = Byte.parseByte(reader.readLine());
+        byte height = byteOnly(READER);
 
         bagDefiner(choice, length, width, height);
     }
 
-    private static byte byteOnly(BufferedReader reader) {
+    public static byte byteOnly(BufferedReader reader) {
         byte choice = 0;
         try {
             choice = Byte.parseByte(reader.readLine());
         } catch (Exception e) {
-            System.out.println("Введите 1 или 2 ");
+            System.out.println("Введите целое число ");
             byteOnly(reader);
         }
         return choice;
