@@ -1,13 +1,18 @@
 package com.hillel.classwork.lesson5.RElern;
 
 
+import com.hillel.classwork.lesson4.RElern.Methods;
+
 import java.io.IOException;
 
 
 public class MoneyGame {
     public static void main(String[] args) throws IOException {
 
-        int playerCoin = random();
+        short maxPoint = 1000;
+        short minPoint = 1;
+
+        int playerCoin = Methods.generateRandom(minPoint,maxPoint);
         int playerCredit = 0;
 
         System.out.println("У вас на счету: "+ playerCredit +"$");
@@ -31,13 +36,6 @@ public class MoneyGame {
             default:
                 System.out.println("Хорошего вечера");
         }
-    }
-
-    private static int random() {
-        short max = 1000;
-        short min = 1;
-        int randomInRange = (int) ((Math.random()*(max - min))+min);
-        return randomInRange;
     }
 
     private static void gamble(int playerCoin, int playerCredit) {
