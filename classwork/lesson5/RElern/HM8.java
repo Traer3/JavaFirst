@@ -11,8 +11,6 @@ public class HM8 {
 
     public void main(String[] args) throws IOException {
 
-        BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
-
         System.out.println("Выберите тип багажа");
         System.out.println("Введите 1 , если вы хотите выбрать сумку ");
         System.out.println("Введите 2 , если вы хотите выбрать рюкзак ");
