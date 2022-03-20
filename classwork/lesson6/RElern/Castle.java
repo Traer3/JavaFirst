@@ -1,5 +1,7 @@
 package com.hillel.classwork.lesson6.RElern;
 
+import com.hillel.classwork.lesson4.RElern.Methods;
+
 public class Castle {
     public static void main(String[] args) {
 
@@ -8,17 +10,12 @@ public class Castle {
 
         short cannonSpreadStarts = 800;
         short cannonSpreadEnds = 1800;
-        short cannonShoot = canonShootSpray(cannonSpreadStarts, cannonSpreadEnds);
+        short canonShootSpray = (short) Methods.generateRandom(cannonSpreadStarts,cannonSpreadEnds);
 
         System.out.println("Пушечное ядро OR попало ? ");
-        System.out.println("Ответ: " + ORisCannonballHit(distanceStarts, distanceEnds, cannonShoot));
+        System.out.println("Ответ: " + ORisCannonballHit(distanceStarts, distanceEnds, canonShootSpray));
         System.out.println("Пушечное ядро AND попало ? ");
-        System.out.println("Ответ: " + ANDisCannonballHit(distanceStarts, distanceEnds, cannonShoot));
-    }
-
-    private static short canonShootSpray(short cannonSpreadStarts, short cannonSpreadEnds) {
-        short cannonShoot = (short) ((Math.random() * (cannonSpreadEnds - cannonSpreadStarts)) + cannonSpreadStarts);
-        return cannonShoot;
+        System.out.println("Ответ: " + ANDisCannonballHit(distanceStarts, distanceEnds, canonShootSpray));
     }
 
     private static boolean ORisCannonballHit(short distanceStarts, short distanceEnds, short cannonShoot) {
