@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 public class HM8 {
 
+   public static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
 
 
     public void main(String[] args) throws IOException {
