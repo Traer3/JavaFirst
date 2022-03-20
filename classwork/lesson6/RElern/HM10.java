@@ -1,18 +1,19 @@
 package com.hillel.classwork.lesson6.RElern;
 
-import java.io.BufferedReader;
+
+import com.hillel.classwork.lesson5.RElern.HM8;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 public class HM10 {
-    static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     public static void main(String[] args) throws IOException {
 
 
         System.out.println("Введите первое число: ");
         double number1 = correctNumber();
         System.out.println("Введите математическую операцию: ");
-        String mathChar = reader.readLine();
+        String mathChar = HM8.READER.readLine();
         System.out.println("Введите второе число: ");
         double number2 = correctNumber();
 
@@ -22,7 +23,7 @@ public class HM10 {
     private static Double correctNumber() {
 
         try {
-            String number = reader.readLine();
+            String number = HM8.READER.readLine();
             return Double.parseDouble(number);
         } catch (Exception e) {
             System.out.println("Введите адекватное значение");
@@ -51,7 +52,7 @@ public class HM10 {
 
             default:
                 System.out.println("Введите математическую операцию: ");
-                String operation = reader.readLine();
+                String operation = HM8.READER.readLine();
                 action(operation, n1, n2);
                 break;
         }
