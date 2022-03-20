@@ -2,16 +2,16 @@ package com.hillel.classwork.lesson5.RElern;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 public class ExperiencedEmployee {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         System.out.println("Введите месячную зарплату: ");
-        short monthPayday = shortOnly(reader);
+        short monthPayday = shortOnly(HM8.READER);
         System.out.println("Введите опыт работы: ");
-        byte employeeExperience = HM8.byteOnly(reader);
+        byte employeeExperience = HM8.byteOnly(HM8.READER);
         paymentCheck(monthPayday, employeeExperience);
     }
 
