@@ -1,8 +1,8 @@
 package com.hillel.classwork.lesson5.RElern;
 
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 public class MoneyGame {
     public static void main(String[] args) throws IOException {
@@ -13,10 +13,9 @@ public class MoneyGame {
         System.out.println("У вас на счету: "+ playerCredit +"$");
         System.out.println("Хотите поиграть ?");
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите 1 , если хотите сыграть ");
         System.out.println("Введите 0 , если сегодня не ваш день ");
-        byte choice = HM8.byteOnly(reader);
+        byte choice = HM8.byteOnly(HM8.READER);
 
         gambleChoice(playerCoin, playerCredit, choice);
 
