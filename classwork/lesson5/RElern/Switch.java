@@ -1,14 +1,13 @@
 package com.hillel.classwork.lesson5.RElern;
 
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 public class Switch {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input number");
-        int number = Integer.parseInt(reader.readLine());
+        int number = Integer.parseInt(HM8.READER.readLine());
         System.out.println("number: " + number);
 
         printMonth(number);
