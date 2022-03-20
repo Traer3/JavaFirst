@@ -1,16 +1,17 @@
 package com.hillel.classwork.lesson6.RElern;
 
-import java.io.BufferedReader;
+
+import com.hillel.classwork.lesson5.RElern.HM8;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 
 public class WarmUp {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите строку 1: ");
-        String string1 = reader.readLine();
+        String string1 = HM8.READER.readLine();
         System.out.println("Введите строку 2: ");
-        String string2 = reader.readLine();
+        String string2 = HM8.READER.readLine();
 
         concatenation(string1, string2);
 
