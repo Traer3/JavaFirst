@@ -1,23 +1,18 @@
 package com.hillel.classwork.lesson5.RElern;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 public class HM9 {
-    static BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
-
     public static void main(String[] args) {
 
         System.out.println("Введите оценку за математику: ");
-        byte math = HM8.byteOnly(READER);
+        byte math = HM8.byteOnly(HM8.READER);
         System.out.println("Введите оценку за английский: ");
-        byte english = HM8.byteOnly(READER);
+        byte english = HM8.byteOnly(HM8.READER);
         System.out.println("Введите оценку за физику: ");
-        byte physic = HM8.byteOnly(READER);
+        byte physic = HM8.byteOnly(HM8.READER);
         System.out.println("Введите оценку за русский: ");
-        byte russian = HM8.byteOnly(READER);
+        byte russian = HM8.byteOnly(HM8.READER);
         System.out.println("Введите оценку за чтение: ");
-        byte reading = HM8.byteOnly(READER);
+        byte reading = HM8.byteOnly(HM8.READER);
 
         short averageMark = markCalculation(math, english, physic, russian, reading);
 
