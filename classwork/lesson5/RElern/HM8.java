@@ -29,14 +29,13 @@ public class HM8 {
     }
 
     public static byte byteOnly(BufferedReader reader) {
-        byte choice = 0;
         try {
-            choice = Byte.parseByte(reader.readLine());
-        } catch (Exception e) {
-            System.out.println("Введите целое число ");
-            byteOnly(reader);
+            String str = reader.readLine();
+            return Byte.parseByte(str);
+        } catch (Exception exception) {
+            System.out.println("Ошибка введите целое число: ");
+            return byteOnly(reader);
         }
-        return choice;
     }
 
     private static void bagDefiner(byte choice, byte length, byte width, byte height) {
