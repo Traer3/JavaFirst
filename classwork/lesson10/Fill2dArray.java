@@ -6,9 +6,7 @@ public class Fill2dArray {
         int[][] numbers = new int[5][5];
 
         //fitsMethod(numbers);
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i][i] = 1;
-        }
+        
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 0; j < numbers.length; j++) {
                 if(i == j){
