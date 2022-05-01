@@ -9,9 +9,8 @@ public class ArrayLink {
     public static void main(String[] args) throws IOException {
         String[] strings = new String[4];
 
-      //  fillArray(strings);
-
-      //  printArray(strings);
+        fillArray(strings);
+        printArray(strings);
 
 
 
@@ -38,7 +37,7 @@ public class ArrayLink {
         }
 
     }
-    private static void fillArray(String[] strings) throws IOException {
+    public static void fillArray(String[] strings) throws IOException {
         for (int i = 0; i < strings.length; i++) {
             System.out.println("Введите значение для " + (i+1) + " индекса");
             strings[i] = HM8.READER.readLine();
