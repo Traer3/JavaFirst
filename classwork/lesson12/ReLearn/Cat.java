@@ -20,11 +20,10 @@ public class Cat {
 
     public boolean fight(Cat cat){
         System.out.println("Ваш кот сильнее ? ");
-        boolean answer = false;
         if(this.strength > cat.strength && this.weight > cat.weight){
-            answer = true;
+            return true;
         }
-        return answer;
+        return false;
     }
 
     public void setAge(byte age){
